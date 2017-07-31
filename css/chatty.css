@@ -1,4 +1,38 @@
-body {
-    background-color: 
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: baseline;
+    align-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+};
 
+.navbar {
+    align-self: center;
+    margin: 20px;
+
+};
+
+ .messageBoard {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
 }
+
+.messageBoard h2 {
+    margin-top: 100px;
+}
+
+.messageBoard textarea {
+    align-self: center;
+    margin: px;
+} 
+
+
+
+
+
