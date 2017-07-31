@@ -5,23 +5,30 @@
     <title>Chatty</title>
     <link rel="stylesheet" href="css/chatty.css">
 </head>
-<body>
+<body id="bodyBG">
     <div class="navWrapper">
         <header class="heading">
             <div class="navBar">
                 <img src="img/Logo.png" height="88px" width="149px">
                 <input type="text" class="inputField" placeholder="Input text here">
                 <button id="clearAll">Clear Message Board</button>
-                <input type="checkbox" name="Dark Theme">Dark Theme
-                <input type="checkbox" name="Large Text">Large Text
+
+                <input id="checkbox1" type="checkbox" name="Dark Theme">
+                <label for="checkbox1">Dark Theme</label>
+
+                <input id="checkbox2" type="checkbox" name="Large Text">
+                <label for="checkbox2">Large Text</label>
+
             </div>
         </header>
     </div>
     <div class="messageBoard">
         <h2>Messages: </h2><br>
-        <textarea name="Message Board" id="display" cols="155" rows="40"></textarea>
+        <textarea name="Message Board" id="display" cols="130" rows="40"></textarea>
 
     </div>
 </body>
-
+<script src="Javascript/main.js"></script>
 </html>
+    <!-- <input id="select1" name="test" type="radio" checked />
+        <label for="select1">Red</label> -->

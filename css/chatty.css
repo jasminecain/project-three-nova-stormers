@@ -1,3 +1,18 @@
+body {
+    background-color: white;
+
+}
+
+.darkT {
+    background-color: black;
+    color: white;
+}
+
+.largeT {
+    font-size: 2em;
+}
+
+
 header {
     width: 100%;
     display: flex;
@@ -14,6 +29,9 @@ header {
 .navbar {
     align-self: center;
     margin: 20px;
+    background-color: white;
+    opacity: 1;
+    border: solid black, 3px;
 
 };
 
@@ -29,8 +47,15 @@ header {
 
 .messageBoard textarea {
     align-self: center;
-    margin: px;
+    margin-left: 10%;
+    margin-right: 10%
 } 
+/* 
+ #checkbox1:checked ~ header{
+    background-color: black;
+    color: white;
+}  */
+
 
 
 
