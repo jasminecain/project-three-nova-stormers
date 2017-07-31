@@ -6,7 +6,22 @@
     <link rel="stylesheet" href="css/chatty.css">
 </head>
 <body>
-    
+    <div class="navWrapper">
+        <header class="heading">
+            <div class="navBar">
+                <img src="img/Logo.png" height="88px" width="149px">
+                <input type="text" class="inputField" placeholder="Input text here">
+                <button id="clearAll">Clear Message Board</button>
+                <input type="checkbox" name="Dark Theme">Dark Theme
+                <input type="checkbox" name="Large Text">Large Text
+            </div>
+        </header>
+    </div>
+    <div class="messageBoard">
+        <h2>Messages: </h2><br>
+        <textarea name="Message Board" id="display" cols="155" rows="40"></textarea>
+
+    </div>
 </body>
 
 </html>
