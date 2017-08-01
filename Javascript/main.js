@@ -1,3 +1,36 @@
+let dataRequest = new XMLHttpRequest();
+
+dataRequest.addEventListener('load', dataRequestComplete);
+dataRequest.addEventListener('error', dataRequestFailed);
+
+function dataRequestComplete(event) {
+  console.log('messages have loaded');
+  var messageData = JSON.parse(event.target.responseText);
+  console.log('message data', messageData);
+  showMsg(messageData);
+}
+
+function showMsg(messages) {
+  let messageDiv = document.getElementById('output');
+  let messageData = '';
+
+  for(item in messages) {
+    let messageItem = messages[item];
+    messageData += '<div>';
+    messageData +='<h2>' + messageItem.msgID + '.' + messageItem.msgTxt + '</h2>';
+    messageData += '</div>';
+  }
+  messageDiv.innerHTML += messageData;
+}
+
+function dataRequestFailed(event) {
+  console.log('dataFailed', event);
+}
+
+dataRequest.open('GET', 'messages.json');
+dataRequest.send();
+
+
 //First half of the requirements for the assignment*********/
 
 let darkTheme = document.getElementById("checkbox1");
@@ -77,7 +110,9 @@ input.addEventListener("keyup", function(event){
 
 
         // Name all of the variables here
+
 // {   
+
     var chatty = {};
     var output = document.getElementById("output");
     var message = document.createElement("h2");
@@ -104,6 +139,3 @@ input.addEventListener("keyup", function(event){
 
 
 // }
-
-
-

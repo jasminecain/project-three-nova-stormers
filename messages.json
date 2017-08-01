@@ -1,23 +1,23 @@
 [
   {
-    "msgone": "messageone",
-    "msgtext": "Squiffy weigh anchor Sink me transom pirate Shiver me timbers sutler bring a spring upon her cable take a caulk skysail."
+    "msgID": "msgone",
+    "msgTxt": "Squiffy weigh anchor Sink me transom pirate Shiver me timbers sutler bring a spring upon her cable take a caulk skysail."
   },
   {
-    "msgtwo": "messageone",
-    "msgtext": "Spanish Main plunder gabion carouser flogging man-of-war jolly boat salmagundi wherry careen."
+    "msgID": "msgtwo",
+    "msgTxt": "Spanish Main plunder gabion carouser flogging man-of-war jolly boat salmagundi wherry careen."
   },
   {
-    "msgthree": "messageone",
-    "msgtext": "Hempen halter sheet wench hail-shot rope's end cable strike colors main sheet gangplank splice the main brace."
+    "msgID": "msgthree",
+    "msgTxt": "Hempen halter sheet wench hail-shot rope's end cable strike colors main sheet gangplank splice the main brace."
 
   },
   {
-    "msgfour": "messageone",
-    "msgtext": "Lad keelhaul boatswain topsail splice the main brace lee Corsair prow take a caulk gangplank."
+    "msgID": "msgfour",
+    "msgTxt": "Lad keelhaul boatswain topsail splice the main brace lee Corsair prow take a caulk gangplank."
   },
   {
-    "msgfive": "messageone",
-    "msgtext": "Brethren of the Coast smartly lee me spike chandler provost hail-shot keel marooned."
-  },
+    "msgID": "msgfive",
+    "msgTxt": "Brethren of the Coast smartly lee me spike chandler provost hail-shot keel marooned."
+  }
 ]
