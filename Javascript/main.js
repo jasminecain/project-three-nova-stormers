@@ -16,8 +16,9 @@ function showMsg(messages) {
 
   for(item in messages) {
     let messageItem = messages[item];
-    messageData += '<div>';
-    messageData +='<h2>' + messageItem.msgID + '.' + messageItem.msgTxt + '</h2>';
+    messageData += '<div class="card">';
+    messageData +='<p>' + messageItem.msgID + '.' + messageItem.msgTxt + '</p>';
+    messageData +='<button>Delete</button>';
     messageData += '</div>';
   }
   messageDiv.innerHTML += messageData;
@@ -49,33 +50,84 @@ largeText.addEventListener("change", function(){
 });
 
 
-// var chatty = (function() {
-
-// 	return {
-// 	};
-
-// })();
 
 //*********** This is the function that runs the "enter" key. ************//
 
 input.addEventListener("keyup", function(event){
     if (event.keyCode === 13) {
         var chatty = {};
+        
+        // i = the id for each individual delete button
+        let i = 0;
+
+        //this is for the input text that the user inputs
         let messageText = input.value;
         console.log("message text", messageText);
+
+        //declaring where the input will eventually be output
         var output = document.getElementById("output");
+
+        //this is creating the variable that will be housing the input of the user
         var message = document.createElement("p");
+
+        //creating the button that will eventually delete the individual message
         var msgDltBtn = document.createElement("button");
+
+        //What the button will say and outputting that into the output
         msgDltBtn.innerHTML = "Delete";
         msgDelete = msgDltBtn.name;
+
+        //Creating the div that will house the html element on line 76
         var cDiv = document.createElement("div");
+
+        //"messageText" is the input that will be housed inside the "message" that will be input into the innerHTML 
         message.innerHTML = messageText;
         cDiv.classList.add("card");
+
+        //Creating the eventListener that will delete the individual message on the message board
+        // msgDltBtn.addEventListener("click", function(event){
+        //     cDiv.removeChild(cDiv.);
+        // })
+
+        //this is running the function that is creating the message
         cDiv.append(message);
+
+        //this is running the function that is creating the delete button for the "card"
         cDiv.append(msgDltBtn);
+
+        //This is outputting all of it 
         output.append(cDiv);
+
     }
 });
+
+
+/******** This is the function to clear everything within the messageboard *********/
+let clearMessages = document.getElementById("clearMessages");
+
+clearMessages.addEventListener("click", function(event){
+        document.getElementById("output").innerHTML = ""; 
+     
+});
+
+
+/********* This is the function for the individual delete button *********/
+
+// let dltMsg = document.getElementById("dltBtn");
+
+// dltMsg.addEventListener("click", function(event){  
+//     document.getElementById("card").innerHTML = "";
+// });
+
+
+
+
+
+
+
+
+
+
 
 
 // input.addEventListener("keyup", function(event){
