@@ -11,13 +11,13 @@ function dataRequestComplete(event) {
 }
 
 function showMsg(messages) {
-  let messageDiv = document.getElementById('preload');
+  let messageDiv = document.getElementById('output');
   let messageData = '';
 
   for(item in messages) {
     let messageItem = messages[item];
     messageData += '<div>';
-    messageData +='<h2>' + messageItem.messages + '.' + messageItem.msgTxt + '</h2>';
+    messageData +='<h2>' + messageItem.msgID + '.' + messageItem.msgTxt + '</h2>';
     messageData += '</div>';
   }
   messageDiv.innerHTML += messageData;
