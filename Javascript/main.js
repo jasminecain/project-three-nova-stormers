@@ -5,23 +5,33 @@ let largeText = document.getElementById("checkbox2");
 let bodyBG = document.getElementById("bodyBG");
 let input = document.getElementById("inputField");
 
-
+/*******This is the Dark Theme*******/
 darkTheme.addEventListener("change", function (){
     bodyBG.classList.toggle("darkT");
 });
 
+/*******This is the Large Text*******/
 largeText.addEventListener("change", function(){
     bodyBG.classList.toggle("largeT");
 });
 
 
+// var chatty = (function() {
 
+// 	return {
+// 	};
+
+// })();
+
+//*********** This is the function that runs the "enter" key. ************//
 
 input.addEventListener("keyup", function(event){
     if (event.keyCode === 13) {
         document.getElementById("output").innerHTML = /*`${chatty}`*/  "test";
     }
 });
+
+
 
 
 //**********************************************************/
