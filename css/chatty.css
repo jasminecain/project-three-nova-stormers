@@ -24,7 +24,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-};
+}
 
 .navbar {
     align-self: center;
@@ -33,10 +33,10 @@ header {
     opacity: 1;
     border: solid black, 3px;
 
-};
+}
 
- .messageBoard {
-    display: flex;
+.messageBoard {
+    width: 80%;
     justify-content: space-around;
     align-content: center;
 }
@@ -45,17 +45,18 @@ header {
     margin-top: 100px;
 }
 
-.messageBoard textarea {
-    align-self: center;
+#output {
+    margin-top: 10px;
     margin-left: 10%;
-    margin-right: 10%
-} 
-/* 
- #checkbox1:checked ~ header{
-    background-color: black;
-    color: white;
-}  */
-
+    margin-right: 10%;
+    height: 800px;
+    background-color: white;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    border: solid black;
+}
 
 
 
