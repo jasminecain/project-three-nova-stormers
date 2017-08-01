@@ -16,7 +16,7 @@ function showMsg(messages) {
 
   for(item in messages) {
     let messageItem = messages[item];
-    messageData += '<div class="card">';
+    messageData += '<div id="card">';
     messageData +='<p>' + messageItem.msgID + '.' + messageItem.msgTxt + '</p>';
     messageData +='<button>Delete</button>';
     messageData += '</div>';
@@ -38,6 +38,10 @@ let darkTheme = document.getElementById("checkbox1");
 let largeText = document.getElementById("checkbox2");
 let bodyBG = document.getElementById("bodyBG");
 let input = document.getElementById("inputField");
+        
+// i = the id for each individual delete button
+let i = 0;
+
 
 /*******This is the Dark Theme*******/
 darkTheme.addEventListener("change", function (){
@@ -57,9 +61,6 @@ input.addEventListener("keyup", function(event){
     if (event.keyCode === 13) {
         var chatty = {};
         
-        // i = the id for each individual delete button
-        let i = 0;
-
         //this is for the input text that the user inputs
         let messageText = input.value;
         console.log("message text", messageText);
@@ -73,21 +74,53 @@ input.addEventListener("keyup", function(event){
         //creating the button that will eventually delete the individual message
         var msgDltBtn = document.createElement("button");
 
+        //Creating the div that will house the html element on line 76
+        var cDiv = document.createElement("div");
+
         //What the button will say and outputting that into the output
         msgDltBtn.innerHTML = "Delete";
         msgDelete = msgDltBtn.name;
 
-        //Creating the div that will house the html element on line 76
-        var cDiv = document.createElement("div");
+            // this is framework variable for us to use "i" and the index/id for the entire kit and kaboodle
+        // msgDltBtn.id = i;
+        
 
         //"messageText" is the input that will be housed inside the "message" that will be input into the innerHTML 
         message.innerHTML = messageText;
-        cDiv.classList.add("card");
+            //by creating `card ${i}`; we are creating a literal string of the id, cDiv. Because "i" is dynamic, in this case it is refering to line 83.
+        // cDiv.id = `card ${i}` ;
+        //     // this is incrimenting "i" by one after it has been "valued"
+        // i++;
 
         //Creating the eventListener that will delete the individual message on the message board
-        // msgDltBtn.addEventListener("click", function(event){
-        //     cDiv.removeChild(cDiv.);
-        // })
+        msgDltBtn.addEventListener("click", function(event){
+            //this = song and dance
+            
+            let card = this.parentNode;
+            output.removeChild(card);
+            
+
+            // //this is finding the card that has the same id as the msgDltBtn
+            // let card = document.getElementById(`card ${this.id}`);
+
+            // //to find the index of "card", we convert the nodeList to an array and call indexof"card" into that array.
+            // let nodeArray = Array.from(output.childNodes);
+            // let cardIndex = nodeArray.indexOf(card);
+
+            // console.log("cardIndex", cardIndex);
+            
+            // //we then use the index of the card to find that node in the "node list"
+            // let cardNode = output.childNodes.item(cardIndex);
+            
+            // //once we have a reference to that node, we can pass that to remove child within the parent element.
+            // output.removeChild(cardNode);
+
+
+        });
+
+        /****** Creating the array in which all of the users inputs will be placed into ******/
+
+
 
         //this is running the function that is creating the message
         cDiv.append(message);
@@ -106,9 +139,10 @@ input.addEventListener("keyup", function(event){
 let clearMessages = document.getElementById("clearMessages");
 
 clearMessages.addEventListener("click", function(event){
-        document.getElementById("output").innerHTML = ""; 
-     
+        document.getElementById("output").innerHTML = "";
+
 });
+
 
 
 /********* This is the function for the individual delete button *********/
