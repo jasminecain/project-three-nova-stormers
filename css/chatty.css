@@ -24,11 +24,12 @@ header {
     top: 0;
     width: 100%;
     background-color: white;
+    color: black
 }
 
 .navbar {
     align-self: center;
-    margin: 20px;
+    margin: 20px 0 20px 0;
     background-color: white;
     opacity: 1;
     border: solid black, 3px;
