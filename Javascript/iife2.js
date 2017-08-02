@@ -48,13 +48,7 @@ var chatty = (function (inputChatty){
         message.innerHTML = messageText;
 
         //Creating the eventListener that will delete the individual message on the message board
-        // msgDltBtn.addEventListener("click", function(event){
-
-        //     //this = song and dance
-        //     let card = this.parentNode;
-        //     output.removeChild(card);
-
-        // });
+      git 
 
         //this is running the function that is creating the message
         cDiv.append(message);
