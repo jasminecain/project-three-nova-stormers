@@ -1,4 +1,4 @@
-
+console.log("main.js");
 
 let dataRequest = new XMLHttpRequest();
 
@@ -73,6 +73,9 @@ largeText.addEventListener("change", function(){
 
 //*********** This is the function that runs the "enter" key. ************//
 
+
+//keep the top part (ish), then move all of the innards of this function to the 2nd IIFE by replacing the innards with the function of calling it
+
 input.addEventListener("keyup", function(event){
     if (event.keyCode === 13) {
         var chatty = {};
@@ -126,9 +129,12 @@ input.addEventListener("keyup", function(event){
 
 let clearMessages = document.getElementById("clearMessages");
 
-    clearMessages.addEventListener("click", function(event){
-    document.getElementById("output").innerHTML = "";
-
+clearMessages.addEventListener("click", function(event){
+    if (output === "") {
+        document.getElementById("clearMessages").disabled = true;
+    } else {
+        document.getElementById("output").innerHTML = "";
+}
 });
 
 

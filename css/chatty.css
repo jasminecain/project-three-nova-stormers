@@ -38,6 +38,7 @@ header {
     width: 80%;
     justify-content: space-around;
     align-content: center;
+    display: flex;
 }
 
 .messageBoard h2 {
@@ -50,7 +51,6 @@ header {
     margin-right: 10%;
     height: 800px;
     width: 90%;
-    display: flex;
     justify-content: space-around;
     align-content: flex-start;
     flex-wrap: wrap;
